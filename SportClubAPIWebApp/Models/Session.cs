@@ -4,13 +4,13 @@ namespace SportClubAPIWebApp.Models
 {
     public class Session
     {
-        public Guid SessionId { get; set; }               // PK
+        public Guid SessionId { get; set; }            
 
-        public Guid TrainerId { get; set; }            // FK → TrainerProfile.UserId
+        public Guid TrainerId { get; set; }           
         [ForeignKey(nameof(TrainerId))]
         public TrainerProfile Trainer { get; set; } = null!;
 
-        public int ActivityTypeId { get; set; }          // FK → ActivityType
+        public int ActivityTypeId { get; set; }        
         public ActivityType ActivityType { get; set; } = null!;
 
         public DateTime DateTime { get; set; }

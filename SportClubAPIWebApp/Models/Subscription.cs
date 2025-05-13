@@ -4,15 +4,15 @@ namespace SportClubAPIWebApp.Models
 {
     public enum SubscriptionType
     {
-        Group,
-        Individual,
-        Unlimited
+        Group,        //Груповий
+        Individual,   //Індивідуальний
+        Unlimited     //Безліміт
     }
     public class Subscription
     {
-        public Guid SubscriptionId { get; set; }          // PK
+        public Guid SubscriptionId { get; set; }         
 
-        public Guid ClientId { get; set; }             // FK → ClientProfile.UserId
+        public Guid ClientId { get; set; }            
         [ForeignKey(nameof(ClientId))]
         public ClientProfile Client { get; set; } = null!;
 

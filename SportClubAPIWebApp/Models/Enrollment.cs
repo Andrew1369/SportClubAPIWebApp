@@ -12,12 +12,12 @@ namespace SportClubAPIWebApp.Models
 
     public class Enrollment
     {
-        public Guid EnrollmentId { get; set; }            // PK
+        public Guid EnrollmentId { get; set; }          
 
-        public Guid SessionId { get; set; }               // FK → Session
+        public Guid SessionId { get; set; }               
         public Session Session { get; set; } = null!;
 
-        public Guid ClientId { get; set; }             // FK → ClientProfile.UserId
+        public Guid ClientId { get; set; }             
         [ForeignKey(nameof(ClientId))]
         public ClientProfile Client { get; set; } = null!;
 

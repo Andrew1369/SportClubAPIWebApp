@@ -2,7 +2,7 @@
 {
     public class ActivityType
     {
-        public Guid ActivityTypeId { get; set; }          // PK
+        public Guid ActivityTypeId { get; set; }          
         public string Name { get; set; } = null!;           
         public bool IsGroup { get; set; }
 

@@ -6,7 +6,7 @@ namespace SportClubAPIWebApp.Models
     public class ClientProfile
     {
         [Key, ForeignKey(nameof(User))]
-        public Guid UserId { get; set; }               // PK та FK → ApplicationUser
+        public Guid UserId { get; set; }             
         public ApplicationUser User { get; set; } = null!;
 
         public int BonusPoints { get; set; }
